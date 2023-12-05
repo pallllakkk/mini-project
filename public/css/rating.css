@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(217, 12%, 63%);
+  --mediumGray: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+
+  --color-background: hsl(218, 10%, 15%);
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:is(html, body) {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--white);
+  font-family: "Overpass", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+:is(img, picture) {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+main {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* Card styles. */
+
+.card {
+  background-color: var(--veryDarkBlue);
+  border-radius: 1em;
+  display: grid;
+  padding: 2em;
+}
+
+.card .icon-star {
+  background-color: var(--darkBlue);
+  border-radius: 100%;
+  display: grid;
+  height: 3em;
+  place-items: center;
+  width: 3em;
+}
+
+
+.card h2 {
+  font-size: 1.777em;
+  font-weight: 700;
+  margin-block: 1rem;
+}
+
+.card p {
+  max-width: 32ch;
+}
+
+/* Rating buttons selection container. */
+.card .ratings {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-block: 1rem;
+}
+
+/* Rating button styles. */
+
+.btn-rating {
+  background-color: var(--darkBlue);
+  border-radius: 100%;
+  color: var(--lightGray);
+  display: grid;
+  height: 3em;
+  place-items: center;
+  width: 3em;
+}
+
+/* hover state activates in button is not active. */
+.btn-rating:hover:not(.btn-rating-active) {
+  background-color: var(--mediumGray);
+  color: var(--white);
+}
+
+.btn-rating-active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* Submit button styles. */
+
+.btn-submit-rating {
+  background-color: var(--orange);
+  border-radius: 1.5em;
+  color: var(--white);
+  display: grid;
+  height: 3em;
+  letter-spacing: 0.125em;
+  place-items: center;
+}
+
+.btn-submit-rating:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Attitribution Styles */
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(128, 45%, 44%);
+}
+
+/* Media Query */
+
+@media (min-width: calc((600 / 16) * 1rem)) {
+  .card p {
+    max-width: 35ch;
+  }
+}
+
+/* Card Thank You styles */
+
+.card-thanks {
+  display: grid;
+  justify-items: center;
+}
+
+.card-thanks .rating-result {
+  color: var(--orange);
+  margin-top: 1.5rem;
+  background-color: var(--darkBlue);
+  padding: 0.5em 1em;
+  display: grid;
+  border-radius: 1em;
+}
+
+.card-thanks p {
+  text-align: center;
+  max-width: 31ch;
+}
+
+@media (min-width: calc((600 / 16) * 1rem)) {
+  .card-thanks p {
+    max-width: 35ch;
+  }
+}
+
+.hide-card {
+  display: none;
+}

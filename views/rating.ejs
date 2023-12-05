@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Rating</title>
+
+    <link rel="stylesheet" href="./css/rating.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Rating card -->
+      <form action="/review" method="post">
+      <div class="card card-rating">
+        <div class="icon-star">
+          <img src="./css/star.png" alt="Icon Star" />
+        </div>
+
+        <h2>How did we do?</h2>
+
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        
+       
+        <div class="ratings">
+          <button class="btn-rating" data-rating="1" value="1" name="rating">1</button>
+          <button class="btn-rating" data-rating="2" value="2" name="rating">2</button>
+          <button class="btn-rating" data-rating="3" value="3" name="rating">3</button>
+          <button class="btn-rating" data-rating="4" value="4" name="rating">4</button>
+          <button class="btn-rating" data-rating="5" value="5" name="rating">5</button>
+        </div>
+
+        <button class="btn-submit-rating" >SUBMIT</button>
+      </div>
+    <!-- </form> -->
+
+      <!-- Thank you card -->
+
+      <div class="card card-thanks hide-card">
+        <div class="rating-result">You selected 4 out of 5</div>
+
+        <h2>Thank you!</h2>
+
+        <p>
+          We appreciate you taking the time to give us a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+        <h2><a href="/choose">Back To Home</a></h2>
+      </div>
+      </form>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Executed by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Playing with words</a>
+      </p>
+    </footer>
+
+    <script src="rating.js"></script>
+  </body>
+</html>
